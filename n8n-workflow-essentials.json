@@ -1,1 +1,119 @@
-
+{
+  "name": "Web Essentials - NotebookLM Automation (Local)",
+  "nodes": [
+    {
+      "id": "manual",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "set",
+      "name": "Set - Dados Web Essentials",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        680,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1",
+              "name": "repos",
+              "value": "Domisnnet/Tecblog-Web-Essentials, Domisnnet/Videos-Web-Essentials, Domisnnet/Domflix-Web-Essentials",
+              "type": "string"
+            },
+            {
+              "id": "2",
+              "name": "owner",
+              "value": "DomisDev",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub - Get Repo Info",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        900,
+        300
+      ],
+      "parameters": {
+        "url": "https://api.github.com/repos/Domisnnet/Tecblog-Web-Essentials",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "DomisDev-n8n"
+            },
+            {
+              "name": "Accept",
+              "value": "application/vnd.github.v3+json"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "gemini",
+      "name": "AI - Analisador de Repo",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        300
+      ],
+      "parameters": {
+        "jsCode": "const repo = $input.first().json;\nreturn [{ \n  titulo: 'Web Essentials: A Arquitetura dos Fundamentos',\n  subtitulo: 'Uma dissecção técnica de UI, Semântica e Multimídia por DomisDev',\n  repo_name: repo.name,\n  description: repo.description,\n  image_prompt: `Isometric blueprint technical illustration, dark background with grid, 3 glowing cubes labeled: HTML5 SEMANTICS neon green, CSS3 LAYOUT neon blue, MULTIMEDIA API neon red, connected with circuit lines, futuristic, 4K, title: Web Essentials: A Arquitetura dos Fundamentos, subtitle: Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev. Technical details: ${repo.description} | Language: ${repo.language}`,\n  next_step: 'Use este image_prompt no nó de geração de imagem (Stability AI, DALL-E, Replicate ou Meta AI)'\n}];"
+      }
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set - Dados Web Essentials",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Dados Web Essentials": {
+      "main": [
+        [
+          {
+            "node": "GitHub - Get Repo Info",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub - Get Repo Info": {
+      "main": [
+        [
+          {
+            "node": "AI - Analisador de Repo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
