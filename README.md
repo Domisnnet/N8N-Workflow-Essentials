@@ -52,7 +52,7 @@ npx n8n start
 Acesse http://localhost:5678
 ```
 
-Importe o workflow `workflows/web-essentials-notebooklm.json`
+Importe o workflow `workflows/web-essentials.json`
 
 <div align="left">
   <a href="https://n8n.io/" target="_blank">
@@ -76,10 +76,11 @@ Importe o workflow `workflows/web-essentials-notebooklm.json`
 
 <h2 id="destaques-tecnicos">5. 💻 Destaques Técnicos</h2>
 
-### 📐 Arquitetura do Workflow
-Uso do padrão `Manual Trigger -> Set -> HTTP Request (GitHub API) -> Code Node (Prompt Builder) -> AI Node -> HTTP (Image Gen)` para garantir que a automação funcione offline e online.
+<h3>📐 Arquitetura do Workflow</h3>
 
-### 🔄 NotebookLM + N8N
+> Uso do padrão `Manual Trigger -> Set -> HTTP Request - GitHub API -> Code Node -> AI Node -> HTTP` para garantir que a automação funcione offline e online.
+
+<h3>🔄 NotebookLM + N8N</h3>
 Implementação do conceito RAG (Retrieval-Augmented Generation): o N8N alimenta o NotebookLM com 3 fontes (GitHub) e o NotebookLM gera a documentação visual "Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev" com cubos neon HTML5 (verde), CSS3 (azul) e MULTIMEDIA API (vermelho).
 
 ---
@@ -87,7 +88,7 @@ Implementação do conceito RAG (Retrieval-Augmented Generation): o N8N alimenta
 <h2 id="instalacao">6. 🚀 Instalação Local</h2>
 
 ```bash
-# Clonar o repositório (pode ser private)
+# Clonar o repositório
 git clone https://github.com/Domisnnet/N8n-Workflow-Essentials.git
 cd N8n-Workflow-Essentials
 
@@ -154,7 +155,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 
 <h2 id="licenca">11. 📄 Licença</h2>
 
-MIT
+[[Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
 ---
 
