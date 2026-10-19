@@ -41,9 +41,13 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 Este projeto roda localmente. Para testar:
 
 <h3>Para Rodar N8N localmente</h3>
+
+<h4>No Terminal rode:</h4>
+
 ```bash
 npx n8n start
 ```
+
 ```bash
 Acesse http://localhost:5678
 ```
