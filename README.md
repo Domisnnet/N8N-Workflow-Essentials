@@ -8,7 +8,7 @@
 [Tecnologias](https://img.shields.io/badge/Tecnologias-N8N%20%7C%20Gemini%20%7C%20GitHub%20API-blueviolet)
 [[Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
-[N8N Workflow](src/assets/images/arquitetura.png)
+[N8N Workflow](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images/arquitetura.png)
 
 Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha **Santander - Automação com N8N** da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
 
