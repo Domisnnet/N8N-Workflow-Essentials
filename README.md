@@ -1,6 +1,6 @@
-[GitHub repo size](https://img.shields.io/github/repo-size/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+[GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
 [GitHub stars](https://img.shields.io/github/stars/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[GitHub last commit](https://img.shields.io/github/last-commit/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+[GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
 
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
 
@@ -14,7 +14,7 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 
 ---
 
-## 📚 Tabela de Conteúdo
+<h2>📚 Tabela de Conteúdo</h2>
 
 | 🤖 O Projeto | 🛠 Técnico | 🤝 Comunidade |
 | :---: | :---: | :---: |
@@ -40,10 +40,12 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 
 Este projeto roda localmente. Para testar:
 
+<h3>Para Rodar N8N localmente</h3>
 ```bash
-# Rodar N8N local
 npx n8n start
-# Acesse http://localhost:5678
+```
+```bash
+Acesse http://localhost:5678
 ```
 
 Importe o workflow `workflows/web-essentials-notebooklm.json`
