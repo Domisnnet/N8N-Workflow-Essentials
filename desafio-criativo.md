@@ -86,3 +86,11 @@
     <img src="https://img.shields.io/badge/Perfil%20GitHub-Domisnnet-26FF00?style=for-the-badge&logo=github&labelColor=111827&color=0A0F1C" alt="Perfil GitHub">
   </a>
 </div>
+
+&nbsp;
+<p align="center">
+  <a href="#sobre-o-projeto">
+    <img src="https://img.shields.io/badge/⬆️%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;">
+  </a>
+</p>
+
