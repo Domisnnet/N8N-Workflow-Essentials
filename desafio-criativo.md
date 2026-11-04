@@ -1,6 +1,6 @@
-[GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[GitHub stars](https://img.shields.io/github/stars/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
 
 <h1 align="center">🎯 Desafio Criativo: Planejando Automações com N8N</h1>
 <p align="center">
