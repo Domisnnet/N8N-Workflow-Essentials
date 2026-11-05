@@ -157,7 +157,7 @@ Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
 
 <h2 id="codigo-fonte">9. 💻 Código Fonte</h2>
 
-[![Repositório](https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-F7DF1E?style=for-the-badge&logo=github&logoColor=000000&labelColor=0d1117)](https://github.com/Domisnnet/N8n-Workflow-Essentials)
+[![Repositório](https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://github.com/Domisnnet/N8n-Workflow-Essentials)
 
 ---
 
