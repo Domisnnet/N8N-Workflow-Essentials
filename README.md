@@ -7,7 +7,6 @@
 ![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen)
 ![Tecnologias](https://img.shields.io/badge/Tecnologias-N8N%20%7C%20Gemini%20%7C%20GitHub%20API-blueviolet)
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
-
 ![N8N Workflow](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images/image-notebook-llm.jpg)
 
 Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha **Santander - Automação com N8N** da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
@@ -28,8 +27,8 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 <h2 id="tecnologias-utilizadas">2. ⚙ Tecnologias Utilizadas</h2>
 
 | Camada | Tecnologias | Descrição |
-| :--- | :--- | :--- |
-| **Automação** | ![N8N](https://img.shields.io/badge/N8N-FF0000?style=flat-square&logo=n8n&logoColor=white) | Orquestração de workflows low-code rodando em localhost:5678 |
+| :----- | :---------- | :-------- |
+| **Automação**  | ![N8N](https://img.shields.io/badge/N8N-FF0000?style=flat-square&logo=n8n&logoColor=white) | Orquestração de workflows low-code rodando em localhost:5678 |
 | **IA Generativa** | ![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white) ![NotebookLM](https://img.shields.io/badge/NotebookLM-34A853?style=flat-square&logo=google) | Análise de código e geração de mapa mental, podcast e infográfico |
 | **API** | ![GitHub](https://img.shields.io/badge/GitHub_API-181717?style=flat-square&logo=github&logoColor=white) | Coleta de commits, descrição e linguagens dos repos Web Essentials |
 | **Geração Visual** | ![Stability](https://img.shields.io/badge/Stability_AI-000000?style=flat-square) | Criação do blueprint isométrico: Web Essentials - A Arquitetura dos Fundamentos |
@@ -65,10 +64,10 @@ Importe o workflow `workflows/web-essentials.json`
 <h2 id="funcionalidades">4. 🧩 Funcionalidades Principais</h2>
 
 | Funcionalidade | Descrição |
-| :--- | :--- |
-| 📥 **GitHub Trigger** | Monitora novos commits nos repos TecBlog, Videos, Domflix e Responsive via API |
-| 🧠 **Prompt Engineering** | Melhora automaticamente o prompt antes de enviar para Gemini/NotebookLM |
-| 🗺️ **Geração Automática** | Cria Mapa Mental, Guia de Estudos e Infográfico estilo blueprint isométrico |
+| :------------- | :-------- |
+| 📥 **GitHub Trigger** | Monitora novos commits nos repos TecBlog, Videos, Domflix e Responsive via API                          |
+| 🧠 **Prompt Engineering**  | Melhora automaticamente o prompt antes de enviar para Gemini/NotebookLM |
+| 🗺️ **Geração Automática**  | Cria Mapa Mental, Guia de Estudos e Infográfico estilo blueprint isométrico |
 | 🔗 **Integração** | Conecta NotebookLM -> Google Docs / Notion -> Telegram/WhatsApp |
 | 💾 **Versionamento** | Salva workflows em JSON para reuso e portfólio (N8n-Workflow-Essentials) |
 
@@ -81,7 +80,8 @@ Importe o workflow `workflows/web-essentials.json`
 > Uso do padrão `Manual Trigger -> Set -> HTTP Request - GitHub API -> Code Node -> AI Node -> HTTP` para garantir que a automação funcione offline e online.
 
 <h3>🔄 NotebookLM + N8N</h3>
-Implementação do conceito RAG (Retrieval-Augmented Generation): o N8N alimenta o NotebookLM com 3 fontes (GitHub) e o NotebookLM gera a documentação visual "Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev" com cubos neon HTML5 (verde), CSS3 (azul) e MULTIMEDIA API (vermelho).
+
+Implementação do conceito RAG - Retrieval-Augmented Generation: o N8N alimenta o NotebookLLM com 3 fontes: GitHub e o NotebookLLM gera a documentação visual "Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev" com cubos neon HTML5 - verde, CSS3 - azul e MULTIMEDIA API - vermelho.
 
 ---
 
@@ -119,13 +119,20 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 
 <h2 id="como-contribuir">7. 🤝 Como Contribuir</h2>
 
-| Fase | Ação | Comando |
-| :--- | :--- | :--- |
-| **01** | **Fork** | Faça Fork do repo |
-| **02** | **Branch** | `git checkout -b feature/NovoWorkflow` |
-| **03** | **Commit** | `git commit -m 'feat: workflow github-para-notion'` |
-| **04** | **Push** | `git push origin feature/NovoWorkflow` |
-| **05** | **PR** | Abra um Pull Request |
+| Fase | Ação | Link / Comando |
+| :--: | :--- | :------------- |
+| **01** | **Fork**   | [![Fork](https://img.shields.io/badge/-Fazer%20Fork-blue?style=flat-square&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/fork) |
+| **02** | **Branch** | `git checkout -b feature/NovoGrafico`            |
+| **03** | **Commit** | `git commit -m 'feat: add gráfico de estrelas'`  |
+| **04** | **Push**   | `git push origin feature/NovoGrafico`            |
+| **05** | **PR**     | [![Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/N8N-Workflow-Essentials/compare) |
+
+### 🐛 Encontrou um problema?
+Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
+
+[![Issues Abertas](https://img.shields.io/github/issues/Domisnnet/N8N-Workflow-Essentials?style=flat-square&color=red&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/issues)
+[![Report Bug](https://img.shields.io/badge/Reportar-Erro-critical?style=flat-square&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/issues/new)
+
 
 ---
 
@@ -157,7 +164,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 <h2 id="créditos">10. 📝 Créditos</h2>
 
 | Atribuição | Responsável |
-| :--- | :--- |
+| :--------- | :---------- |
 | **Dev & Automação** | **DomisDev** |
 | **Inspiração** | **DIO - Santander Automação com N8N & NotebookLM** |
 | **IA** | **Google Gemini & NotebookLM** |
@@ -166,14 +173,16 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 
 <h2 id="licenca">11. 📄 Licença</h2>
 
-[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
+Este projeto está sob a &nbsp;[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
 ---
 
 <h2 id="perfil-do-github">12. 👨💻 Perfil</h2>
 
+DomisDev — Desenvolvedor Front-end
+
 <a href="https://github.com/Domisnnet">
-  <img src="src/assets/images/DomisDev.png" width="90" alt="DomisDev">
+  <img src="https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images//DomisDev.png" width="90" alt="DomisDev">
 </a>
 
 &nbsp;
