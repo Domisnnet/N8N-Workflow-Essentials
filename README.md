@@ -11,12 +11,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Domisnnet/N8n-Workflow-Essentials">
-    <img src="https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="Repositório Oficial n8n" />
-  </a>
-</p>
-
-<p align="center">
   Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
 </p>
 
