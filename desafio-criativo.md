@@ -94,7 +94,7 @@ Regras:
 
 <h2 id="destaques-tecnicos">5. 💻 Destaque Técnico - Sobre esta Entrega:</h2>
 <p>
-  Este arquivo <code>desafio-criativo.md</code> foi criado no repositório público <strong>N8n-Workflow-Essentials</strong> para garantir a melhor prática de versionamento e portfólio, conforme as opções recomendadas pela DIO.
+  Este arquivo <code>desafio-criativo.md</code> foi criado no repositório público <code>N8n-Workflow-Essentials</code> para garantir a melhor prática de versionamento e portfólio, conforme as opções recomendadas pela DIO.
 </p>
 
 ---
@@ -114,7 +114,7 @@ cd N8n-Workflow-Essentials
 npx n8n start
 ```
 
-> ⚠️ Importante: Após iniciar, acesse ```bash http://localhost:5678``` para visualizar e testar os workflows importados.
+> ⚠️ Importante: Após iniciar, acesse `http://localhost:5678` para visualizar e testar os workflows importados.
 
 ---
 
