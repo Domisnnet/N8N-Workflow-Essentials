@@ -84,14 +84,14 @@ Importe o workflow: `workflows/web-essentials.json`
 
 <h2 id="destaques-tecnicos">5. 💻 Destaques Técnicos</h2>
 
-<h3>📐 Arquitetura do Workflow</h3>
+<h4>📐 Arquitetura do Workflow</h4>
 
 > Uso do padrão `Manual Trigger` → `Set` → `HTTP Request (GitHub API)` → `Code Node` → `AI Node` → `HTTP` para garantir que a automação funcione de forma previsível, tanto offline quanto online.
 
 
-<h3>🔄 NotebookLM + n8n - RAG</h3>
+<h4>🔄 NotebookLM + n8n - RAG</h4>
 
-> Implementação do conceito **RAG** (Retrieval-Augmented Generation): o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon (HTML5 verde, CSS3 azul e Multimedia API vermelho).
+Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon (HTML5 verde, CSS3 azul e Multimedia API vermelho).
 
 
 <h2 id="instalacao">6. 🛠️ Instalação Local</h2>
@@ -115,9 +115,9 @@ npx n8n start
 docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 ```
 
-> ⚠️ Importante: Após iniciar, vá em Workflows 
+> ⚠️ Importante: Após iniciar, vá em Workflows:
 >
-> → Import from File → selecione `workflows/web-essentials-notebooklm.json`
+> Import from File → selecione `workflows/web-essentials-notebooklm.json`
 >
 > Não esqueça de configurar suas credenciais da API do Google Gemini e GitHub.
 
