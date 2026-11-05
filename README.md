@@ -92,7 +92,7 @@ Importe o workflow: `workflows/web-essentials.json`
 
 <h4>🔄 NotebookLM + n8n - RAG</h4>
 
-Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon - `HTML5` - verde , `CSS3` - azul e `Multimedia API` - vermelho.
+Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neons: `HTML5` , `CSS3` e `Multimedia API.`
 
 
 <h2 id="instalacao">6. 🛠️ Instalação Local</h2>
