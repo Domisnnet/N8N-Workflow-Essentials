@@ -41,7 +41,7 @@
 
 ---
 
-<h2 id="como-acessar">3. 🚀 Commo Acessar - Contexto e Regras:</h2>
+<h2 id="como-acessar">3. 🚀 Como Acessar - Contexto e Regras:</h2>
 
 <p>Aqui, informei os sistemas envolvidos, as etapas do fluxo e as restrições importantes para garantir a robustez e segurança da automação.</p>
 
@@ -93,7 +93,7 @@ Regras:
 
 ---
 
-<h2 id="destaques-tecnicos">5. 💻 Destaque Tecnico - Sobre esta Entrega:</h2>
+<h2 id="destaques-tecnicos">5. 💻 Destaque Técnico - Sobre esta Entrega:</h2>
 
 <p>
   Este arquivo <code>desafio-criativo.md</code> foi criado no repositório público <strong>N8n-Workflow-Essentials</strong> para garantir a melhor prática de versionamento e portfólio, conforme as opções recomendadas pela DIO.
