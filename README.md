@@ -182,7 +182,7 @@ Explore a documentação no Repositório Oficial:
 
 <h2 id="licenca">11. 📄 Licença</h2>
 
-Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE) &nbsp; para mais detalhes.
+Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE) &nbsp; para mais detalhes.
 
 ---
 
