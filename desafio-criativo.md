@@ -4,11 +4,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
 
-<h2 id="sobre-o-projeto">1. 🎯 Sobre o Projeto: Desafio Criativo com n8n</h2>
+<h2 id="sobre-o-projeto">1. 🎯 Sobre o Projeto - Desafio Criativo com n8n:</h2>
 
 <p align="center">
   <strong>Usando Apenas Bons Prompts</strong><br>
-  <em>Documentação Oficial da entrega do desafio | Trilha Santander - Automação com n8n:</em>
+  <em>Documentação Oficial da entrega do desafio | Trilha Santander & Automação com n8n:</em>
 </p>
 
 > Um bom prompt nasce de intenção clara, contexto e instruções específicas. 
@@ -29,7 +29,7 @@
 
 ---
 
-<h2 id="tecnologias-utilizadas">2.⚙️ Passo 1: Defina a Automação</h2>
+<h2 id="tecnologias-utilizadas">2. ⚙️ Tecnologias Utilizadas  - Defina a Automação:</h2>
 
 <p>Nesta etapa, descrevi qual processo desejo automatizar e quem será beneficiado por ele.</p>
 
@@ -41,7 +41,7 @@
 
 ---
 
-<h2 id="como-acessar">3.🚀 Passo 2: Contexto e Regras</h2>
+<h2 id="como-acessar">3. 🚀 Commo Acessar - Contexto e Regras:</h2>
 
 <p>Aqui, informei os sistemas envolvidos, as etapas do fluxo e as restrições importantes para garantir a robustez e segurança da automação.</p>
 
@@ -53,7 +53,7 @@
 
 ---
 
-<h2 id="funcionalidades">4. 🧩 Passo 3: Prompt Final</h2>
+<h2 id="funcionalidades">4. 🧩 Funcionalidade - Prompt Final:</h2>
 
 <p>A união de todas as peças em um único prompt completo, pronto para ser executado por uma IA especialista em n8n.</p>
 
@@ -62,35 +62,38 @@
 <br>
 
 ```text
-Atue como um especialista em n8n e Engenharia de Prompt.
+Atue como um especialista em n8n e Engenharia de Prompt:
 
 Crie uma automação para processar novos commits de repositórios Web Essentials e gerar documentação visual e de estudo automaticamente.
 
 Público:
-Desenvolvedor Full-stack (DomisDev) e comunidade de tecnologia.
+
+Desenvolvedor Full-Stack e comunidade de tecnologia.
 
 Ferramentas envolvidas:
-GitHub API (Trigger), n8n, Google Gemini / NotebookLM (IA Generativa) e Stability AI (Geração de imagem).
+
+GitHub API - Trigger , n8n , Google Gemini / NotebookLM - IA Generativa e Stability AI - Geração de imagem.
 
 Fluxo:
+
 1. Receber notificação de novo commit no repositório via Webhook ou Polling.
-2. Coletar dados detalhados do commit (mensagem, autor, arquivos alterados) via HTTP Request (GitHub API).
-3. Processar os dados e enviar para a IA (Gemini/NotebookLM) com engenharia de prompt para gerar um resumo técnico, mapa mental ou roteiro de podcast.
+2. Coletar dados detalhados do commit - mensagem, autor, arquivos alterados , via HTTP Request - GitHub API.
+3. Processar os dados e enviar para a IA - Gemini/NotebookLM , com engenharia de prompt para gerar um resumo técnico, mapa mental ou roteiro de podcast.
 4. Gerar um prompt de imagem baseado na arquitetura e enviar para Stability AI criar um blueprint isométrico.
-5. Salvar os resultados no repositório ou enviar notificação formatada (Telegram/Notion).
+5. Salvar os resultados no repositório ou enviar notificação formatada - Telegram/Notion.
 
 Regras:
-- Ignorar commits de merge ou com mensagens genéricas (ex: "update", "fix", "test").
+- Ignorar commits de merge ou com mensagens genéricas - ex: "update", "fix", "test".
 - Garantir que nenhuma credencial, token ou dado sensível (.env) seja enviado no contexto para a IA.
-- Em caso de falha na geração da imagem (Stability AI), prosseguir o fluxo salvando apenas a documentação em texto.
+- Em caso de falha na geração da imagem - Stability AI , prosseguir o fluxo salvando apenas a documentação em texto.
 
-Explique quais nós do n8n devem ser utilizados e a lógica de funcionamento do workflow.
+- Explique quais nós do n8n devem ser utilizados e a lógica de funcionamento do workflow.
 ```
 </details>
 
 ---
 
-<h2 id="destaques-tecnicos">5. 💻 Sobre esta Entrega</h2>
+<h2 id="destaques-tecnicos">5. 💻 Destaque Tecnico - Sobre esta Entrega:</h2>
 
 <p>
   Este arquivo <code>desafio-criativo.md</code> foi criado no repositório público <strong>N8n-Workflow-Essentials</strong> para garantir a melhor prática de versionamento e portfólio, conforme as opções recomendadas pela DIO.
@@ -98,7 +101,7 @@ Explique quais nós do n8n devem ser utilizados e a lógica de funcionamento do 
 
 ---
 
-<h2 id="instalacao">6. 🛠️ Instalação Local</h2>
+<h2 id="instalacao">6. 🛠️ Instalação Local:</h2>
 
 <h4>1. Clonar o repositório:</h4>
 
@@ -117,7 +120,7 @@ npx n8n start
 
 ---
 
-<h2 id="como-contribuir">7. 🤝 Como Contribuir</h2>
+<h2 id="como-contribuir">7. 🤝 Como Contribuir com o Projeto:</h2>
 
 | Fase | Ação | Link / Comando |
 | :--: | :--- | :------------- |
@@ -136,7 +139,7 @@ Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
 
 ---
 
-<h2 id="faq">8. 🧠 Perguntas Frequentes</h2>
+<h2 id="faq">8. 🧠 Perguntas Frequentes:</h2>
 
 <details>
 <summary><strong>Por que usar prompts estruturados ❓</strong></summary>
@@ -155,7 +158,7 @@ Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
 
 ---
 
-<h2 id="codigo-fonte">9. 💻 Código Fonte</h2>
+<h2 id="codigo-fonte">9. 💻 Código Fonte:</h2>
 
 Explore a documentação no Repositório Oficial:
 
@@ -163,7 +166,7 @@ Explore a documentação no Repositório Oficial:
 
 ---
 
-<h2 id="creditos">10. 📝 Créditos</h2>
+<h2 id="creditos">10. 📝 Créditos ao Desenvolvedor:</h2>
 
 | Atribuição | Responsável |
 | :--------- | :---------- |
@@ -173,22 +176,25 @@ Explore a documentação no Repositório Oficial:
 
 ---
 
-<h2 id="licenca">11. Licença</h2>
+<h2 id="licenca">11. 📄 Licença:</h2>
 
 Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE) &nbsp; para mais detalhes.
 
 ---
 
-<h2 id="perfil-do-github">12. 👨‍ Perfil</h2>
+<h2 id="perfil-do-github">12. 👨‍ Perfil:</h2>
 
 <strong>DomisDev</strong> — Desenvolvedor Web Front-End & Entusiasta de Automação:
+
 <a href="https://github.com/Domisnnet">
-<img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
+  <img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" />
 </a>
 
 &nbsp;
 <p align="center">
 <a href="#sobre-o-projeto">
-  <img src="https://img.shields.io/badge/⬆%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;">
+  <img src=
+    "https://img.shields.io/badge/⬆%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;"
+  >
 </a>
 </p>
