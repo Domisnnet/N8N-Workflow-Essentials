@@ -79,7 +79,7 @@ Importe o workflow: `workflows/web-essentials.json`
 | 🧠 **Prompt Engineering**  | Melhora automaticamente o prompt antes de enviar para Gemini/NotebookLM |
 | 🗺️ **Geração Automática**  | Cria Mapa Mental, Guia de Estudos e Infográfico estilo blueprint isométrico |
 | 🔗 **Integração** | Conecta NotebookLM -> Google Docs / Notion -> Telegram/WhatsApp |
-| 💾 **Versionamento** | Salva workflows em JSON para reuso e portfólio (N8n-Workflow-Essentials) |
+| 💾 **Versionamento** | Salva workflows em JSON para reuso e portfólio `N8n-Workflow-Essentials` |
 
 ---
 
@@ -87,12 +87,12 @@ Importe o workflow: `workflows/web-essentials.json`
 
 <h4>📐 Arquitetura do Workflow</h4>
 
-> Uso do padrão `Manual Trigger` → `Set` → `HTTP Request (GitHub API)` → `Code Node` → `AI Node` → `HTTP` para garantir que a automação funcione de forma previsível, tanto offline quanto online.
+> Uso do padrão `Manual Trigger` → `Set` → `HTTP Request - GitHub API` → `Code Node` → `AI Node` → `HTTP` para garantir que a automação funcione de forma previsível, tanto off-line quanto online.
 
 
 <h4>🔄 NotebookLM + n8n - RAG</h4>
 
-Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon (HTML5 verde, CSS3 azul e Multimedia API vermelho).
+Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon - `HTML5` - verde , `CSS3` - azul e `Multimedia API` - vermelho.
 
 
 <h2 id="instalacao">6. 🛠️ Instalação Local</h2>
