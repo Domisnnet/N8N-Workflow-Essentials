@@ -85,10 +85,14 @@ Importe o workflow: `workflows/web-essentials.json`
 <h2 id="destaques-tecnicos">5. 💻 Destaques Técnicos</h2>
 
 <h3>📐 Arquitetura do Workflow</h3>
+
 > Uso do padrão `Manual Trigger` → `Set` → `HTTP Request (GitHub API)` → `Code Node` → `AI Node` → `HTTP` para garantir que a automação funcione de forma previsível, tanto offline quanto online.
 
-<h3>🔄 NotebookLM + n8n (RAG)</h3>
+
+<h3>🔄 NotebookLM + n8n - RAG</h3>
+
 > Implementação do conceito **RAG** (Retrieval-Augmented Generation): o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neon (HTML5 verde, CSS3 azul e Multimedia API vermelho).
+
 
 <h2 id="instalacao">6. 🛠️ Instalação Local</h2>
 
@@ -184,7 +188,7 @@ Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[![Licença MIT](ht
 <strong>DomisDev</strong> — Desenvolvedor Web Front-End & Entusiasta de Automação:
 
 <a href="https://github.com/Domisnnet">
-<img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
+  <img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
 </a>
 
 &nbsp;
