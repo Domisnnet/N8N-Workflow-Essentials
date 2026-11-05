@@ -1,14 +1,14 @@
-[GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[GitHub stars](https://img.shields.io/github/stars/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
 
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
 
-[Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen)
-[Tecnologias](https://img.shields.io/badge/Tecnologias-N8N%20%7C%20Gemini%20%7C%20GitHub%20API-blueviolet)
-[[Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
+![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen)
+![Tecnologias](https://img.shields.io/badge/Tecnologias-N8N%20%7C%20Gemini%20%7C%20GitHub%20API-blueviolet)
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
-[N8N Workflow](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images/arquitetura.png)
+![N8N Workflow](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images/arquitetura.png)
 
 Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha **Santander - Automação com N8N** da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
 
@@ -18,10 +18,10 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 
 | 🤖 O Projeto | 🛠 Técnico | 🤝 Comunidade |
 | :---: | :---: | :---: |
-| [[1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto) | [[5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) | [[9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte) |
-| [[2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) | [[6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao) | [[10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#créditos) |
-| [[3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar) | [[7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) | [[11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca) |
-| [[4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades) | [[8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq) | [[12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
+| [![1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto) | [![5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) | [![9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte) |
+| [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) | [![6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao) | [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#créditos) |
+| [![3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar) | [![7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) | [![11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca) |
+| [![4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades) | [![8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq) | [![12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
 
 ---
 
@@ -29,10 +29,10 @@ Bem-vindo ao **N8N Workflow Essentials**! Uma coleção de automações low-code
 
 | Camada | Tecnologias | Descrição |
 | :--- | :--- | :--- |
-| **Automação** | [N8N](https://img.shields.io/badge/N8N-FF0000?style=flat-square&logo=n8n&logoColor=white) | Orquestração de workflows low-code rodando em localhost:5678 |
-| **IA Generativa** | [Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white) [NotebookLM](https://img.shields.io/badge/NotebookLM-34A853?style=flat-square&logo=google) | Análise de código e geração de mapa mental, podcast e infográfico |
-| **API** | [GitHub](https://img.shields.io/badge/GitHub_API-181717?style=flat-square&logo=github&logoColor=white) | Coleta de commits, descrição e linguagens dos repos Web Essentials |
-| **Geração Visual** | [Stability](https://img.shields.io/badge/Stability_AI-000000?style=flat-square) | Criação do blueprint isométrico: Web Essentials - A Arquitetura dos Fundamentos |
+| **Automação** | ![N8N](https://img.shields.io/badge/N8N-FF0000?style=flat-square&logo=n8n&logoColor=white) | Orquestração de workflows low-code rodando em localhost:5678 |
+| **IA Generativa** | ![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat-square&logo=google&logoColor=white) ![NotebookLM](https://img.shields.io/badge/NotebookLM-34A853?style=flat-square&logo=google) | Análise de código e geração de mapa mental, podcast e infográfico |
+| **API** | ![GitHub](https://img.shields.io/badge/GitHub_API-181717?style=flat-square&logo=github&logoColor=white) | Coleta de commits, descrição e linguagens dos repos Web Essentials |
+| **Geração Visual** | ![Stability](https://img.shields.io/badge/Stability_AI-000000?style=flat-square) | Criação do blueprint isométrico: Web Essentials - A Arquitetura dos Fundamentos |
 
 ---
 
@@ -87,22 +87,33 @@ Implementação do conceito RAG (Retrieval-Augmented Generation): o N8N alimenta
 
 <h2 id="instalacao">6. 🚀 Instalação Local</h2>
 
+<h4>Clonar o repositório:</h4>
+
 ```bash
-# Clonar o repositório
 git clone https://github.com/Domisnnet/N8n-Workflow-Essentials.git
-cd N8n-Workflow-Essentials
-
-# Rodar N8N
-npx n8n start
-# ou docker
-docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
-
-# Importar workflow
-# No UI: Workflows -> Import from File -> workflows/web-essentials-notebooklm.json
-
-# Configurar credenciais
-# Crie credencial Google Gemini API e GitHub (opcional)
 ```
+```bash
+cd N8n-Workflow-Essentials
+```
+
+<h4>Rodar N8N:</h4>
+
+```bash
+npx n8n start
+```
+
+<h4>Ou docker:</h4>
+
+```bash
+docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
+```
+
+> Importar workflow
+>
+> No UI: Workflows -> Import from File -> workflows/web-essentials-notebooklm.json
+>
+> Configurar credenciais
+> Crie credencial Google Gemini API e GitHub (opcional)
 
 ---
 
@@ -139,7 +150,7 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 
 <h2 id="codigo-fonte">9. 💻 Código Fonte</h2>
 
-[[Repositório](https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-F7DF1E?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/Domisnnet/N8n-Workflow-Essentials)
+[![Repositório](https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-F7DF1E?style=for-the-badge&logo=github&labelColor=0d1117)](https://github.com/Domisnnet/N8n-Workflow-Essentials)
 
 ---
 
@@ -155,24 +166,20 @@ docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
 
 <h2 id="licenca">11. 📄 Licença</h2>
 
-[[Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
 ---
 
 <h2 id="perfil-do-github">12. 👨💻 Perfil</h2>
 
 <a href="https://github.com/Domisnnet">
-  <img src="https://avatars.githubusercontent.com/u/Domisnnet" width="90" alt="DomisDev">
+  <img src="src/assets/images/DomisDev.png" width="90" alt="DomisDev">
 </a>
+
+&nbsp;
 <p align="center">
   <a href="#sobre-o-projeto">
     <img src="https://img.shields.io/badge/⬆%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;">
   </a>
 </p>
 
-&nbsp;
-<p align="center">
-  <a href="#sobre-o-projeto">
-    <img src="https://img.shields.io/badge/⬆️%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;">
-  </a>
-</p>
