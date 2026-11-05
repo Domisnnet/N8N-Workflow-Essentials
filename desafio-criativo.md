@@ -3,6 +3,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Domisnnet/N8n-Workflow-Essentials/blob/main/LICENSE)
 
+
 <h2 id="sobre-o-projeto">1. 🎯 Sobre o Projeto: Desafio Criativo com n8n</h2>
 
 <p align="center">
@@ -10,15 +11,9 @@
   <em>Documentação Oficial da entrega do desafio | Trilha Santander - Automação com n8n:</em>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Domisnnet/N8n-Workflow-Essentials">
-    <img src="https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="Repositório Oficial n8n" />
-  </a>
-</p>
-
-<p align="center">
-  Um bom prompt nasce de intenção clara, contexto e instruções específicas. Nesta atividade, organizei minhas ideias e as transformei em comandos claros para orientar uma IA a produzir exatamente o workflow imaginado para o projeto <strong>n8n Workflow Essentials</strong>.
-</p>
+> Um bom prompt nasce de intenção clara, contexto e instruções específicas. 
+>
+> Nesta atividade, organizei minhas ideias e as transformei em comandos claros para orientar uma `IA` a produzir exatamente o `workflow` imaginado para o projeto <strong>n8n Workflow Essentials</strong>.
 
 ---
 
@@ -30,6 +25,7 @@
 | [![2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) | [![6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao) | [![10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#creditos) |
 | [![3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar) | [![7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) | [![11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca) |
 | [![4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades) | [![8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq) | [![12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
+
 
 ---
 
@@ -62,7 +58,7 @@
 <p>A união de todas as peças em um único prompt completo, pronto para ser executado por uma IA especialista em n8n.</p>
 
 <details>
-<summary><strong>📋 Clique aqui para ver/copiar o Prompt Final</strong></summary>
+<summary><strong>📋 Clique aqui para ver/copiar o Prompt Final:</strong></summary>
 <br>
 
 ```text
