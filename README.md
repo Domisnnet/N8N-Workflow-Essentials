@@ -68,7 +68,7 @@ Importe o workflow: `workflows/web-essentials.json`
 
 <div align="left">
   <a href="https://n8n.io/" target="_blank">
-    <img alt="Botão N8N" src="src="https://img.shields.io/badge/Importar_Workflow-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
+    <img alt="Botão N8N" src="https://img.shields.io/badge/Importar_Workflow-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
   </a>
 </div>
 
