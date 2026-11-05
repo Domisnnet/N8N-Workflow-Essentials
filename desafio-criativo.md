@@ -36,7 +36,7 @@
 | Campo | Descrição |
 | :----- | :---------- |
 | **Tarefa repetitiva** | Processar novos commits de repositórios Web Essentials e gerar documentação visual e de estudo automaticamente |
-| **Público ou responsável** | Desenvolvedor Full-stack (DomisDev) e comunidade de tecnologia |
+| **Público ou responsável** | Desenvolvedor Full-Stack e comunidades de tecnologia |
 | **Resultado esperado** | Transformar código e mensagens de commit em resumos técnicos, mapas mentais e blueprints isométricos, salvando-os de forma organizada |
 
 ---
@@ -48,7 +48,7 @@
 | Categoria | Detalhes |
 | :-------- | :------- |
 | **Ferramentas** | ![GitHub](https://img.shields.io/badge/GitHub_API-181717?style=flat&logo=github&logoColor=white) ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white) ![Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat&logo=google&logoColor=white) ![NotebookLM](https://img.shields.io/badge/NotebookLM-34A853?style=flat&logo=google&logoColor=white) |
-| **Fluxo desejado** | 1. Receber notificação de novo commit via Webhook ou Polling<br>2. Coletar dados detalhados via HTTP Request (GitHub API)<br>3. Processar e enviar para IA gerar resumo técnico<br>4. Gerar prompt de imagem para Stability AI<br>5. Salvar resultados ou enviar notificação |
+| **Fluxo desejado** | 1. Receber notificação de novo commit via Webhook ou Polling<br>2. Coletar dados detalhados via HTTP Request - GitHub API<br>3. Processar e enviar para IA gerar resumo técnico<br>4. Gerar prompt de imagem para Stability AI<br>5. Salvar resultados ou enviar notificação |
 | **Regras importantes** | • Ignorar commits de merge ou genéricos<br>• <strong>Nunca</strong> enviar credenciais ou .env para a IA<br>• Em caso de falha, prosseguir salvando apenas texto |
 
 ---
