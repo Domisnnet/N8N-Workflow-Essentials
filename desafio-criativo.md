@@ -30,7 +30,6 @@
 ---
 
 <h2 id="tecnologias-utilizadas">2. ⚙️ Tecnologias Utilizadas  - Defina a Automação:</h2>
-
 <p>Nesta etapa, descrevi qual processo desejo automatizar e quem será beneficiado por ele.</p>
 
 | Campo | Descrição |
@@ -42,8 +41,9 @@
 ---
 
 <h2 id="como-acessar">3. 🚀 Como Acessar - Contexto e Regras:</h2>
-
-<p>Aqui, informei os sistemas envolvidos, as etapas do fluxo e as restrições importantes para garantir a robustez e segurança da automação.</p>
+<p>
+  Aqui, informei os sistemas envolvidos, as etapas do fluxo e as restrições importantes para garantir a robustez e segurança da automação.
+</p>
 
 | Categoria | Detalhes |
 | :-------- | :------- |
@@ -54,7 +54,6 @@
 ---
 
 <h2 id="funcionalidades">4. 🧩 Funcionalidade - Prompt Final:</h2>
-
 <p>A união de todas as peças em um único prompt completo, pronto para ser executado por uma IA especialista em n8n.</p>
 
 <details>
@@ -94,7 +93,6 @@ Regras:
 ---
 
 <h2 id="destaques-tecnicos">5. 💻 Destaque Técnico - Sobre esta Entrega:</h2>
-
 <p>
   Este arquivo <code>desafio-criativo.md</code> foi criado no repositório público <strong>N8n-Workflow-Essentials</strong> para garantir a melhor prática de versionamento e portfólio, conforme as opções recomendadas pela DIO.
 </p>
