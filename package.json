@@ -1,0 +1,8 @@
+{
+  "name": "n8n-workflow-essentials",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "n8n": "n8n start"
+  }
+}
