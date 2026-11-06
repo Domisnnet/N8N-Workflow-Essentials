@@ -1,0 +1,109 @@
+{
+  "name": "TecBlog - Web Essentials: Arquitetura dos Fundamentos",
+  "nodes": [
+    {
+      "id": "manual",
+      "name": "Manual do Gatilho",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        400,
+        300
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "set",
+      "name": "Conjunto - Repositorios",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        620,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1",
+              "name": "repo",
+              "value": "Domisnnet/Tecblog-Web-Essentials",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub - Obter informacoes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        300
+      ],
+      "parameters": {
+        "url": "https://api.github.com/repos/Domisnnet/Tecblog-Web-Essentials",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "DomisDev-n8n"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "code_svg",
+      "name": "Codigo - Gera Imagem SVG",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        300
+      ],
+      "parameters": {
+        "jsCode": "const repo = $input.first().json;\nconst title = 'Web Essentials: A Arquitetura dos Fundamentos';\nconst svg = `\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1200\" height=\"800\" viewBox=\"0 0 1200 800\">\n  <rect width=\"1200\" height=\"800\" fill=\"#0a0f1c\"/>\n  <defs>\n    <pattern id=\"grid\" width=\"40\" height=\"40\" patternUnits=\"userSpaceOnUse\"><path d=\"M 40 0 L 0 0 0 40\" fill=\"none\" stroke=\"#1e293b\" stroke-width=\"0.5\" opacity=\"0.5\"/></pattern>\n  </defs>\n  <rect width=\"1200\" height=\"800\" fill=\"url(#grid)\"/>\n  <text x=\"600\" y=\"80\" text-anchor=\"middle\" font-family=\"Arial Black\" font-size=\"38\" fill=\"#ffffff\">Web Essentials: A Arquitetura dos Fundamentos</text>\n  <!-- CUBO 1 VERDE -->\n  <g transform=\"translate(200, 220)\">\n    <path d=\"M0 80 L80 20 L240 20 L160 80 Z\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/>\n    <path d=\"M0 80 L0 240 L160 240 L160 80\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"3\"/>\n    <path d=\"M160 80 L240 20 L240 180 L160 240\" fill=\"none\" stroke=\"#22c55e\" stroke-width=\"2\" opacity=\"0.7\"/>\n    <text x=\"80\" y=\"65\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" font-weight=\"bold\" fill=\"#86efac\">HTML5</text>\n    <text x=\"80\" y=\"90\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#bbf7d0\">SEMANTICS</text>\n    <text x=\"80\" y=\"280\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"11\" fill=\"#22c55e\">NODE 01 - MARKUP LAYER</text>\n  </g>\n  <!-- CUBO 2 AZUL -->\n  <g transform=\"translate(500, 220)\">\n    <path d=\"M0 80 L80 20 L240 20 L160 80 Z\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n    <path d=\"M0 80 L0 240 L160 240 L160 80\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"3\"/>\n    <path d=\"M160 80 L240 20 L240 180 L160 240\" fill=\"none\" stroke=\"#3b82f6\" stroke-width=\"2\" opacity=\"0.7\"/>\n    <text x=\"80\" y=\"65\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" font-weight=\"bold\" fill=\"#93c5fd\">CSS3</text>\n    <text x=\"80\" y=\"90\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#bfdbfe\">LAYOUT</text>\n    <text x=\"80\" y=\"280\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"11\" fill=\"#3b82f6\">NODE 02 - STYLE E GRID</text>\n  </g>\n  <!-- CUBO 3 VERMELHO -->\n  <g transform=\"translate(800, 220)\">\n    <path d=\"M0 80 L80 20 L240 20 L160 80 Z\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/>\n    <path d=\"M0 80 L0 240 L160 240 L160 80\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"3\"/>\n    <path d=\"M160 80 L240 20 L240 180 L160 240\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2\" opacity=\"0.7\"/>\n    <text x=\"80\" y=\"65\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"22\" font-weight=\"bold\" fill=\"#fca5a5\">MULTIMEDIA</text>\n    <text x=\"80\" y=\"90\" text-anchor=\"middle\" font-family=\"Arial\" font-size=\"16\" fill=\"#fecaca\">API</text>\n    <text x=\"80\" y=\"280\" text-anchor=\"middle\" font-family=\"monospace\" font-size=\"11\" fill=\"#ef4444\">NODE 03 - MEDIA STREAM</text>\n  </g>\n  <!-- CONEXOES -->\n  <line x1=\"440\" y1=\"350\" x2=\"500\" y2=\"350\" stroke=\"#22c55e\" stroke-width=\"2\" stroke-dasharray=\"8 4\"/>\n  <line x1=\"740\" y1=\"350\" x2=\"800\" y2=\"350\" stroke=\"#3b82f6\" stroke-width=\"2\" stroke-dasharray=\"8 4\"/>\n  <text x=\"40\" y=\"760\" font-family=\"monospace\" font-size=\"12\" fill=\"#64748b\">[ LEGEND ] CIRCUIT TRACE | DATA FLOW | POWER BUS - SCALE 1:1 - DOC WE-ARCH-001 - by DomisDev</text>\n</svg>`;\nconst binaryData = Buffer.from(svg).toString('base64');\nreturn [{\n  json: { titulo: title, repo: repo.name || 'Tecblog-Web-Essentials', gerado_em: new Date().toISOString(), tipo: 'SVG 100% FREE, sem API externa' },\n  binary: { data: { data: binaryData, mimeType: 'image/svg+xml', fileName: 'tecblog-3-cubes-blueprint.svg' } }\n}];\n"
+      }
+    }
+  ],
+  "connections": {
+    "Manual do Gatilho": {
+      "main": [
+        [
+          {
+            "node": "Conjunto - Repositorios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conjunto - Repositorios": {
+      "main": [
+        [
+          {
+            "node": "GitHub - Obter informacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub - Obter informacoes": {
+      "main": [
+        [
+          {
+            "node": "Codigo - Gera Imagem SVG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "name": "TecBlog - V3 FIX Imagem",
+  "nodes": [
+    {
+      "id": "manual",
+      "name": "Gatilho manual",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        460,
+        300
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "set",
+      "name": "Conjunto - Repositorios",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        680,
+        300
+      ],
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "1",
+              "name": "repo",
+              "value": "Domisnnet/Tecblog-Web-Essentials",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub - Obter informacoes",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        900,
+        300
+      ],
+      "parameters": {
+        "url": "https://api.github.com/repos/Domisnnet/Tecblog-Web-Essentials",
+        "method": "GET",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "DomisDev-n8n"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "code",
+      "name": "Codigo - Prompt Gera",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1120,
+        300
+      ],
+      "parameters": {
+        "jsCode": "const repo = $input.first().json;\n// Prompt curto sem acento para nao travar\nconst prompt = `isometric tech blueprint, 3 glowing cubes HTML5 green CSS3 blue multimedia red, circuit lines, dark background, 4k, text Web Essentials by DomisDev`;\nreturn [{\n  titulo: 'Web Essentials: A Arquitetura dos Fundamentos',\n  repo: repo.name,\n  prompt: prompt,\n  encoded_prompt: encodeURIComponent(prompt),\n  final_url: `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=1024&height=1024&nologo=true&model=turbo`\n}];"
+      }
+    },
+    {
+      "id": "http_image",
+      "name": "Gerar Imagem - FIX",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1340,
+        300
+      ],
+      "parameters": {
+        "url": "=https://image.pollinations.ai/prompt/{{$json[\"encoded_prompt\"]}}?width=1024&height=1024&nologo=true&model=turbo",
+        "method": "GET",
+        "options": {
+          "timeout": 60000,
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "responseFormat": "file"
+            },
+            "responseFormat": "file"
+          }
+        },
+        "binaryPropertyName": "data"
+      }
+    }
+  ],
+  "connections": {
+    "Gatilho manual": {
+      "main": [
+        [
+          {
+            "node": "Conjunto - Repositorios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Conjunto - Repositorios": {
+      "main": [
+        [
+          {
+            "node": "GitHub - Obter informacoes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GitHub - Obter informacoes": {
+      "main": [
+        [
+          {
+            "node": "Codigo - Prompt Gera",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Codigo - Prompt Gera": {
+      "main": [
+        [
+          {
+            "node": "Gerar Imagem - FIX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
