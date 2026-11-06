@@ -51,7 +51,7 @@
         -700,
         300
       ],
-      "notes": "LOCAL: RPA/docs/data.csv servido em http://localhost:8000/data.csv (python -m http.server 8000 dentro de RPA/docs/)"
+      "notes": "LOCAL: RPA/docs/data.csv em http://localhost:8000/data.csv (python -m http.server 8000 em RPA/docs/)"
     },
     {
       "parameters": {
@@ -120,6 +120,7 @@
       "parameters": {
         "resource": "message",
         "operation": "send",
+        "sendTo": "={{ $json.email }}",
         "subject": "={{ $json.subject }}",
         "emailType": "text",
         "message": "={{ $json.body }}",
