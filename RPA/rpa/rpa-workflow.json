@@ -1,0 +1,244 @@
+{
+  "name": "RPA - Assistente de Investimentos",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "clientes",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "c3bd4eb3-301e-4664-87b3-3bffd82f6521",
+      "name": "Webhook - RPA Clientes",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Entrada do RPA: { clientes: [...] } - 1 item por cliente\nconst body = $input.first().json.body || $input.first().json;\nconst clientes = body.clientes || body || [];\nif (!Array.isArray(clientes) || !clientes.length) throw new Error('Webhook sem clientes: esperado { clientes: [...] }');\nreturn clientes.map(c => ({ json: { nome:String(c.nome||'').trim(), email:String(c.email||'').trim(), saldo:String(c.saldo||'').trim(), perfil:String(c.perfil||'').trim() } }));"
+      },
+      "id": "1059577d-bce4-469c-a381-d70ceced4fbb",
+      "name": "Code - Dividir Clientes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "http://localhost:8000/data.csv",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "id": "28f3115d-608c-490a-8749-7747d6efe95e",
+      "name": "HTTP Request - data.csv",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -700,
+        300
+      ],
+      "notes": "LOCAL: RPA/docs/data.csv servido em http://localhost:8000/data.csv (python -m http.server 8000 dentro de RPA/docs/)"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Cruza Clientes x Investimentos - data.csv LOCAL (RPA/docs/data.csv via http://localhost:8000/data.csv)\n// Entrada: 1 cliente por vez (vem de Dividir). CSV vem do node HTTP Request - data.csv.\n// Regra: mesmo perfil E saldo >= minimo. Fallback: menor minimo do perfil.\nconst cliente = $input.first().json;\nconst csv = $('HTTP Request - data.csv').first().json.data || '';\nconst saldoNum = Number(String(cliente.saldo).replace('R$','').replace(/\\./g,'').replace(',','.').trim()) || 0;\nconst produtos = String(csv).trim().split(/\\r?\\n/).slice(1).map(l => { const [perfil,produto,minimo,rentabilidade] = l.split(','); return {perfil:perfil?.trim(),produto:produto?.trim(),minimo:Number(minimo)||0,rentabilidade:rentabilidade?.trim()}; });\nlet elegiveis = produtos.filter(p => p.perfil===cliente.perfil && saldoNum>=p.minimo);\nif (!elegiveis.length) elegiveis = produtos.filter(p=>p.perfil===cliente.perfil).sort((a,b)=>a.minimo-b.minimo).slice(0,1);\nreturn [{ json:{ ...cliente, saldo_num:saldoNum, email_valido:/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(cliente.email), produtos:elegiveis, produto_principal:elegiveis[0]?.produto||'', rentabilidade_principal:elegiveis[0]?.rentabilidade||'' } }];"
+      },
+      "id": "32faa14d-faa1-4132-bcf1-f18081a981f6",
+      "name": "Code - Cruze Dados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -300,
+        300
+      ],
+      "notes": "Cruza 1 cliente x data.csv LOCAL. Regra: mesmo perfil E saldo >= minimo."
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Gera mensagem personalizada por TEMPLATE (sem custo de LLM).\n// Para usar LLM: troque este node por 'Message a model' e use $json.prompt como entrada.\nreturn $input.all().map(({json:c})=>{\n  const lista = c.produtos.map(p=>`- ${p.produto} (minimo R$ ${p.minimo} | rentabilidade ${p.rentabilidade})`).join('\\n');\n  const prompt = `Voce e um assessor de investimentos. Gere um briefing curto, sem promessas de rentabilidade, para: ${c.nome} | Perfil ${c.perfil} | Saldo ${c.saldo}. Produtos compativeis: ${lista}. Maximo 120 palavras.`;\n  const body = `Ola ${c.nome},\\n\\nCom base no seu perfil ${c.perfil} e saldo atual de ${c.saldo}, separamos opcoes compativeis com voce:\\n${lista}\\n\\nDestaque: ${c.produto_principal} (${c.rentabilidade_principal}).\\n\\nEste e-mail e informativo e nao garante rentabilidade. Fale com seu assessor antes de investir.\\n\\nEquipe RPA + n8n - DIO`;\n  return {json:{...c, prompt, subject:`Sugestao de Investimento para voce, ${c.nome} | ${c.produto_principal}`, body}};\n});"
+      },
+      "id": "65c1efe2-d99e-4351-aef6-82e34c1a34ac",
+      "name": "Code - Gerar Mensagem",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -80,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "134ac79d-97c3-4400-b0d9-422d6c7f0d22",
+              "leftValue": "={{ $json.email_valido }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true
+      },
+      "id": "ecf86e62-6e8f-43cf-baff-ba48c591648f",
+      "name": "IF - Email Valido?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        140,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "subject": "={{ $json.subject }}",
+        "emailType": "text",
+        "message": "={{ $json.body }}",
+        "options": {}
+      },
+      "id": "59f04013-2f58-431c-a59a-76a5e8934c7c",
+      "name": "Send a message - Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        360,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ {status:'ok', cliente:$json.nome, email:$json.email, perfil:$json.perfil, produto:$json.produto_principal} }}",
+        "options": {}
+      },
+      "id": "372a4dd5-3abe-4e05-928d-8d68ba742daf",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        580,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook - RPA Clientes": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request - data.csv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request - data.csv": {
+      "main": [
+        [
+          {
+            "node": "Code - Dividir Clientes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Dividir Clientes": {
+      "main": [
+        [
+          {
+            "node": "Code - Cruze Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Cruze Dados": {
+      "main": [
+        [
+          {
+            "node": "Code - Gerar Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Gerar Mensagem": {
+      "main": [
+        [
+          {
+            "node": "IF - Email Valido?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - Email Valido?": {
+      "main": [
+        [
+          {
+            "node": "Send a message - Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message - Gmail": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}
