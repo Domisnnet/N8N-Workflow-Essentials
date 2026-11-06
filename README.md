@@ -17,7 +17,7 @@
 |  | Projeto | O que faz |
 | :--: | :--- | :--- |
 | 🎨 **1** | **Criador de Imagem com IA** | Gera o blueprint isométrico “Web Essentials - A Arquitetura dos Fundamentos” com Stability AI |
-| 🤖 **2** | **n8n + NotebookLM / Gemini** | Transforma commits do GitHub (TecBlog, Videos, Domflix, Responsive) em mapa mental, podcast e infográfico automáticos |
+| 🤖 **2** | **n8n + NotebookLM / Gemini** | Transforma commits do GitHub - TecBlog, Videos, Domflix, Responsive em mapa mental, podcast e infográfico automáticos |
 | 📧 **3** | **RPA + n8n - E-mail Automático** | RPA extrai 10 clientes de um `index.html`, o n8n cruza com `data.csv` por perfil + saldo e envia e-mail personalizado de investimento |
 
 ---
