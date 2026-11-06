@@ -7,7 +7,7 @@
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
 
 <p align="center">
-  <img src="./src/assets/images/image-notebook-llm.jpg" alt="N8N Workflow Preview" width="800" />
+  <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
 
 <p align="center">
