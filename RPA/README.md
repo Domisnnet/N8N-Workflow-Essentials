@@ -1,172 +1,248 @@
-# Criando um Assistente de Investimentos com RPA e IA Generativa
+[GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+[GitHub stars](https://img.shields.io/github/stars/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+[GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
+[[License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE)
 
-## Descrição
 
-Aprenda na prática como criar um fluxo de automação inteligente combinando técnicas de RPA (Robotic Process Automation) com workflows de IA no N8N.
+<h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙</h2>
 
-Neste desafio, você vai construir um assistente de investimentos automatizado. O fluxo começa com a extração de dados de clientes em uma página web usando Python, passa pela orquestração de um workflow no N8N e termina com a geração de mensagens personalizadas para cada perfil de investidor.
+<p align="center">
+  <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
+</p>
 
-O projeto foi pensado para ser simples e acessível, mesmo para quem está dando os primeiros passos em Python e automação. A ideia é que você entenda o conceito de RPA de forma leve e aplique tudo em um cenário realista do mercado financeiro.
+<p align="center">
+  Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
+</p>
 
-## Objetivo do Projeto
+<p align="center">
+  Este repositório reúne <strong>3 projetos</strong>:
+</p>
 
-Desenvolver um pipeline de automação que:
-
-1. **Coleta dados de clientes** de uma página web simulada usando Python
-2. **Processa as informações** através de um workflow no N8N
-3. **Cruza perfis de investidor** com uma base de opções de investimento
-4. **Gera mensagens personalizadas** para cada cliente
-
-Ao final, você terá um sistema funcional que demonstra como empresas do setor financeiro podem automatizar a comunicação com clientes de forma inteligente.
-
-## Arquitetura do Projeto
-
-```mermaid
-flowchart LR
-  %% Pipeline RPA + N8N + IA (máx. 7 caixinhas)
-
-  subgraph GH["GitHub Pages"]
-    A["Clientes<br>(docs/index.html)"]
-    E["Investimentos (docs/data.csv)"]
-  end
-
-  subgraph PY["RPA (Python)"]
-    B["Extrair Clientes"]
-  end
-
-  subgraph N8["N8N (Workflow)"]
-    C["Webhook<br>(Entrada)"]
-    D["Cruzar Dados<br>(Clientes x Investimentos)"]
-    M["Gerar Mensagem<br>(Template/LLM)"]
-    C --> D --> M
-  end
-
-  subgraph OUT["Saída"]
-    O["Mensagens Personalizadas"]
-  end
-
-  A <-->|HTTP| B --> C
-  E <-->|HTTP| D
-  M --> O
-
-  %% Estilos
-  classDef source fill:#E3F2FD,stroke:#1E88E5,stroke-width:1px,color:#0D47A1;
-  classDef rpa fill:#E8F5E9,stroke:#43A047,stroke-width:1px,color:#1B5E20;
-  classDef n8n fill:#FFF3E0,stroke:#FB8C00,stroke-width:1px,color:#E65100;
-  classDef out fill:#FCE4EC,stroke:#D81B60,stroke-width:1px,color:#880E4F;
-
-  class A,E source;
-  class B rpa;
-  class C,D,M n8n;
-  class O out;
-
-```
-
-## Tecnologias e Ferramentas
-
-O projeto utiliza ferramentas gratuitas e acessíveis, organizadas conforme cada etapa do fluxo:
-
-| Etapa | Ferramenta | Função |
-|-------|-----------|--------|
-| Hospedagem | GitHub Pages | Servir a página de clientes e o CSV de investimentos |
-| Extração (RPA) | Python + BeautifulSoup | Coletar dados dos clientes via web scraping |
-| Orquestração | N8N | Processar dados, cruzar perfis e gerar mensagens |
-| Geração com IA | Agente de IA no N8N | Criar mensagens personalizadas com LLM (desafio extra) |
-
-Além dessas, você pode usar IAs generativas como **Gemini**, **Claude** ou **ChatGPT** como copilotos para auxiliar na escrita de código e tirar dúvidas ao longo do desenvolvimento.
-
-## Roteiro do Desafio
-
-### Etapa 1: Entenda o Projeto
-
-Antes de começar, explore o repositório base que já contém a estrutura inicial:
-
-1. **Página de Clientes (`docs/index.html`):** Uma página HTML hospedada no GitHub Pages com uma lista de clientes fictícios contendo nome, email, saldo e perfil de investidor (Conservador, Moderado ou Arrojado). Disponível online [neste link](https://digitalinnovationone.github.io/dio-lab-assistente-investimentos-rpa-n8n).
-2. **Dados de Investimentos (`docs/data.csv`):** Um arquivo CSV também hospedado no GitHub Pages com opções de investimento organizadas por perfil. Disponível online [neste link](https://digitalinnovationone.github.io/dio-lab-assistente-investimentos-rpa-n8n/data.csv).
-3. **Script de RPA (`src/extrair_clientes.ipynb`):** Um notebook Python que acessa a página de clientes e extrai os dados da tabela usando BeautifulSoup.
-
-> 🤖 **Por que o script é considerado RPA?** Ele faz exatamente o que um humano faria manualmente: abre uma página, lê os dados de uma tabela e os envia para outro sistema. A diferença é que o "robô" (código) executa isso automaticamente. Essa abordagem é útil quando não existe uma API disponível ou quando precisamos integrar sistemas legados.
-
-### Etapa 2: Configure o Ambiente
-
-1. Faça um **fork** do repositório base para sua conta do GitHub
-2. Crie uma conta no [N8N Cloud](https://n8n.io/) ou instale localmente
-3. Abra o notebook `src/extrair_clientes.ipynb` no [Google Colab](https://colab.research.google.com/) e execute para entender o fluxo de extração
-
-> 💡 **Atenção:** O script já extrai os dados, mas o envio ao N8N está comentado (`TODO`). Você vai configurar a URL do Webhook após criá-lo na próxima etapa.
-
-### Etapa 3: Desenvolva o Workflow no N8N
-
-Este é o coração do desafio! Monte um fluxo que:
-
-1. Receba os dados dos clientes via Webhook (copie a URL gerada e configure no script Python)
-2. Leia o arquivo `docs/data.csv` com as opções de investimento
-3. Cruze o perfil de cada cliente com a opção adequada
-4. Gere uma mensagem de recomendação para cada cliente
-
-### Etapa 4 (MVP): Mensagens Estáticas
-
-Para a versão mínima, use templates de mensagem fixos baseados no perfil:
-
-- **Conservador:** Foco em renda fixa e segurança
-- **Moderado:** Mix equilibrado entre renda fixa e variável
-- **Arrojado:** Ênfase em ações e maior potencial de retorno
-
-### Etapa 5 (Desafio): Integração com IA Generativa
-
-Conecte o Agente de IA do N8N a um modelo como Gemini ou GPT para:
-
-- Analisar o contexto do cliente (saldo, perfil)
-- Gerar mensagens únicas e personalizadas
-- Criar recomendações mais inteligentes e humanizadas
-
-## Entregáveis
-
-### MVP (Mínimo Viável)
-
-- [ ] Repositório forkado com o workflow N8N implementado
-- [ ] Workflow N8N exportado (`n8n/workflow.json`) com mensagens estáticas
-- [ ] Script de RPA integrado ao Webhook do N8N
-- [ ] Print ou vídeo demonstrando o fluxo funcionando de ponta a ponta
-
-### Desafio Completo
-
-- [ ] Todos os itens do MVP
-- [ ] Integração com Agente de IA no N8N
-- [ ] Mensagens geradas dinamicamente via LLM
-- [ ] Documentação explicando as decisões técnicas
-
-## Estrutura do Repositório
-
-```
-📁 dio-lab-assistente-investimentos-rpa-n8n/
-├── 📄 README.md
-├── 📁 src/
-│   └── 📄 extrair_clientes.ipynb   # ✅ Notebook Python (já implementado, falta só o TODO)
-├── 📁 n8n/
-│   └── 📄 workflow.json            # 🎯 Seu desafio: exportar o workflow aqui
-└── 📁 docs/
-    ├── 📄 index.html               # ✅ Página de clientes (já implementado)
-    └── 📄 data.csv                 # ✅ Opções de investimento (já implementado)
-```
-
-## Prompts Úteis para Copilotos de IA
-
-| Tarefa | Sugestão de Prompt |
-|--------|-------------------|
-| Gerar dados fictícios | "Crie 10 clientes fictícios com nome, email, saldo e perfil de investidor em JSON" |
-| Entender código | "Explique o que faz a biblioteca BeautifulSoup em Python" |
-| Debugar erros | "Meu script Python está dando erro X, o que pode ser?" |
-| Montar workflow | "Como configuro um webhook no N8N para receber dados JSON?" |
-
-## Referências
-
-- [Documentação do N8N](https://docs.n8n.io/)
-- [BeautifulSoup: Web Scraping com Python](https://realpython.com/beautiful-soup-web-scraper-python/)
-- [GitHub Pages: Guia Rápido](https://pages.github.com/)
+| # | Projeto | O que faz |
+| :--: | :--- | :--- |
+| 🎨 **1** | **Criador de Imagem com IA** | Cria o blueprint isométrico: "Web Essentials - A Arquitetura dos Fundamentos" |
+| 🤖 **2** | **n8n + NotebookLM / Gemini** | Transforma commits do GitHub em Mapa Mental, Guia de Estudos e Infográfico |
+| 📧 **3** | **RPA + n8n - E-mail Automático** | RPA extrai clientes, o n8n cruza com `data.csv` e envia e-mail personalizado de investimento |
 
 ---
 
-**Bons estudos e mãos à obra** 🚀
+<h2>📚 Tabela de Conteúdo</h2>
 
-Se tiver dúvidas, lembre-se: a melhor forma de aprender é experimentando. Erre, corrija e celebre cada pequena vitória no caminho.
+| 🤖 O Projeto | 🛠 Técnico | 🤝 Comunidade |
+| :---: | :---: | :---: |
+| [[1. Sobre](https://img.shields.io/badge/1%20-%20Sobre-4CAF50)](#sobre-o-projeto) | [[5. Destaques](https://img.shields.io/badge/5%20-%20Destaques-607D8B)](#destaques-tecnicos) | [[9. Código](https://img.shields.io/badge/9%20-%20Código-795548)](#codigo-fonte) |
+| [[2. Techs](https://img.shields.io/badge/2%20-%20Techs-2196F3)](#tecnologias-utilizadas) | [[6. Instalação](https://img.shields.io/badge/6%20-%20Instalação-009688)](#instalacao) | [[10. Créditos](https://img.shields.io/badge/10%20-%20Créditos-607D8B)](#creditos) |
+| [[3. Acessar](https://img.shields.io/badge/3%20-%20Acessar-FF9800)](#como-acessar) | [[7. Contribuir](https://img.shields.io/badge/7%20-%20Contribuir-3F51B5)](#como-contribuir) | [[11. Licença](https://img.shields.io/badge/11%20-%20Licença-E91E63)](#licenca) |
+| [[4. Funções](https://img.shields.io/badge/4%20-%20Funções-9C27B0)](#funcionalidades) | [[8. FAQ](https://img.shields.io/badge/8%20-%20FAQ-FFC107)](#faq) | [[12. Perfil](https://img.shields.io/badge/12%20-%20Perfil-212121)](#perfil-do-github) |
+
+---
+
+<h2 id="tecnologias-utilizadas">2.⚙ Tecnologias Utilizadas</h2>
+
+| Camada | Tecnologias | Descrição |
+| :----- | :---------- | :-------- |
+| **Automação** | [n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white) | Orquestração de workflows low-code rodando em `localhost:5678` |
+| **IA Generativa** | [Gemini](https://img.shields.io/badge/Gemini-4285F4?style=flat&logo=google&logoColor=white) [NotebookLM](https://img.shields.io/badge/NotebookLM-34A853?style=flat&logo=google&logoColor=white) | Análise de código e geração de mapa mental, podcast e infográfico |
+| **API** | [GitHub](https://img.shields.io/badge/GitHub_API-181717?style=flat&logo=github&logoColor=white) | Coleta de commits, descrição e linguagens dos repositórios Web Essentials |
+| **Geração Visual** | [Stability AI](https://img.shields.io/badge/Stability_AI-000000?style=flat&logo=stability&logoColor=white) | Criação do blueprint isométrico: "Web Essentials - A Arquitetura dos Fundamentos" |
+| **RPA** | [Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | Extração de clientes de `RPA/docs/index.html` com `requests` + `BeautifulSoup` e POST para o webhook do n8n |
+| **E-mail** | [Gmail](https://img.shields.io/badge/Gmail-EA4335?style=flat&logo=gmail&logoColor=white) | Envio automático via SMTP com senha de app |
+
+---
+
+<h2 id="como-acessar">3.🚀 Como Acessar</h2>
+
+Este projeto roda localmente. Para testar:
+
+
+<h4>1. Iniciar o n8n no terminal:</h4>
+
+```bash
+npx n8n start
+```
+
+<h4>2. Acessar a interface:</h4>
+
+> Abra seu navegador em:
+
+```bash
+Acesse http://localhost:5678
+```
+
+<h4>3. Importar o workflow:</h4>
+
+Importe o workflow: `workflows/web-essentials.json`
+
+Para o projeto RPA, importe o workflow: `RPA/RPA-workflow-final.json`
+
+<div align="left">
+  <a href="https://n8n.io/" target="_blank">
+    <img alt="Botão N8N" src="https://img.shields.io/badge/Importar_Workflow-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
+  </a>
+</div>
+
+
+---
+
+<h2 id="funcionalidades">4. 🧩 Funcionalidades Principais</h2>
+
+
+| Funcionalidade | Descrição |
+| :------------- | :-------- |
+| 📥 **GitHub Trigger** | Monitora novos commits nos repos TecBlog, Videos, Domflix e Responsive via API                          |
+| 🧠 **Prompt Engineering**  | Melhora automaticamente o prompt antes de enviar para Gemini/NotebookLM |
+| 🗺 **Geração Automática**  | Cria Mapa Mental, Guia de Estudos e Infográfico estilo blueprint isométrico |
+| 🔗 **Integração** | Conecta NotebookLM -> Google Docs / Notion -> Telegram/WhatsApp |
+| 💾 **Versionamento** | Salva workflows em JSON para reuso e portfólio `N8n-Workflow-Essentials` |
+| 📧 **RPA + E-mail Automático** | RPA extrai 10 clientes de `RPA/docs/index.html`, o n8n cruza cada cliente com `RPA/docs/data.csv` por perfil + saldo e envia e-mail personalizado de investimento |
+
+---
+
+<h2 id="destaques-tecnicos">5. 💻 Destaques Técnicos</h2>
+
+<h4>📐 Arquitetura do Workflow</h4>
+
+> Uso do padrão `Manual Trigger` → `Set` → `HTTP Request - GitHub API` → `Code Node` → `AI Node` → `HTTP` para garantir que a automação funcione de forma previsível, tanto off-line quanto online.
+
+
+<h4>🔄 NotebookLM + n8n - RAG</h4>
+
+Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alimenta o NotebookLM com fontes do GitHub, e o NotebookLM gera a documentação visual *"Web Essentials: A Arquitetura dos Fundamentos - Uma dissecação técnica de UI, Semântica e Multimídia por DomisDev"*, com cubos neons: `HTML5` , `CSS3` e `Multimedia API.`
+
+
+<h4>📧 RPA + n8n - Assistente de Investimentos</h4>
+
+> Uso do padrão `Webhook` → `Code - Dividir Clientes` → `HTTP Request - data.csv` → `Code - Cruze Dados` → `Code - Gerar Mensagem` → `IF - Email Valido?` → `Enviar um e-mail` → `Respond to Webhook` para garantir que cada cliente receba apenas produtos compatíveis com o seu perfil e saldo.
+
+<p align="center">
+  <img src="./src/assets/images/print-email.png" alt="E-mail automático enviado pelo workflow RPA + n8n - Ana Silva, Conservador, Poupança" width="800" />
+</p>
+
+> Exemplo testado: `Ana Silva | Conservador | R$ 12.500,00` → `Poupança (mínimo R$ 100 | rentabilidade 6,2%)`. Assunto: `Sugestao de Investimento para voce, Ana Silva | Poupança`.
+
+
+<h2 id="instalacao">6. 🛠 Instalação Local</h2>
+
+
+<h4>1. Clonar o repositório:</h4>
+
+```bash
+git clone https://github.com/Domisnnet/N8N-Workflow-Essentials.git
+```
+
+<h4>2. Rodar com npx - Recomendado:</h4>
+
+```bash
+npx n8n start
+```
+
+<h4>Ou rodar com Docker:</h4>
+
+```bash
+docker run -it --rm --name n8n -p 5678:5678 -v ~/.n8n:/home/node/.n8n n8nio/n8n
+```
+
+> ⚠ Importante: Após iniciar, vá em Workflows:
+>
+> Import from File → selecione `workflows/web-essentials-notebooklm.json`
+>
+> Não esqueça de configurar suas credenciais da API do Google Gemini e GitHub.
+
+<h4>3. Rodar o projeto RPA (opcional):</h4>
+
+```bash
+# Terminal 1 - n8n
+npx n8n start
+
+# Terminal 2 - dentro de RPA/docs/, para o n8n ler o data.csv
+python -m http.server 8000
+
+# Terminal 3 - RPA
+python RPA/rpa/extrair_clientes.py
+```
+
+> ⚠ Importante: Para o envio de e-mail, use SMTP com senha de app do Gmail. Nunca faça commit da senha de app.
+
+---
+
+<h2 id="como-contribuir">7. 🤝 Como Contribuir</h2>
+
+| Fase | Ação | Link / Comando |
+| :--: | :--- | :------------- |
+| **01** | **Fork**   | [[Fork](https://img.shields.io/badge/-Fazer%20Fork-blue?style=flat-square&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/fork) |
+| **02** | **Branch** | `git checkout -b feature/NovoGrafico`            |
+| **03** | **Commit** | `git commit -m 'feat: add gráfico de estrelas'`  |
+| **04** | **Push**   | `git push origin feature/NovoGrafico`            |
+| **05** | **PR**     | [[Abrir PR](https://img.shields.io/badge/-Abrir%20PR-green?style=flat-square&logo=git)](https://github.com/Domisnnet/N8N-Workflow-Essentials/compare) |
+
+### 🐛 Encontrou um problema?
+Se algo não estiver funcionando como esperado, não hesite em abrir um chamado:
+
+[[Issues Abertas](https://img.shields.io/github/issues/Domisnnet/N8N-Workflow-Essentials?style=flat-square&color=red&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/issues)
+[[Report Bug](https://img.shields.io/badge/Reportar-Erro-critical?style=flat-square&logo=github)](https://github.com/Domisnnet/N8N-Workflow-Essentials/issues/new)
+
+
+---
+
+<h2 id="faq">8. 🧠 Perguntas Frequentes</h2>
+
+<details>
+<summary><strong>Preciso criar um repositório específico para rodar localmente ❓</strong></summary>
+<p>💻 <strong>Resposta:</strong> Não. O n8n salva tudo em <code>~/.n8n</code> localmente. Este repositório serve para versionar seus arquivos JSON, documentar o processo e entregar como projeto de portfólio. <em>Nunca faça commit de credenciais ou arquivos .env com chaves de API.</em>
+</details>
+
+<details>
+<summary><strong>Posso usar IA dentro do n8n ❓</strong></summary>
+<p>🤖 <strong>Resposta:</strong> Sim! Este projeto é a prova. Usamos Google Gemini e NotebookLM dentro do workflow para transformar código em infográficos, podcasts e guias de estudo automaticamente.</p>
+</details>
+
+<details>
+<summary><strong>Como gerar o infográfico surreal mencionado ❓</strong></summary>
+<p>🎨 <strong>Resposta:</strong>  O nó "Code" gera o prompt: <em>"Isometric blueprint technical illustration, dark background with grid, 3 glowing cubes HTML5 SEMANTICS neon green, CSS3 LAYOUT neon blue, MULTIMEDIA API neon red..."</em>. Copie esse prompt e use em ferramentas como Stability AI, DALL-E 3 ou Leonardo.AI.</p>
+</details>
+
+<details>
+<summary><strong>Por que o Gmail pede senha de app no projeto RPA ❓</strong></summary>
+<p>📧 <strong>Resposta:</strong> O Gmail não aceita a senha normal para envio por SMTP no n8n. É preciso ativar a verificação em 2 etapas e gerar uma senha de app. <em>Nunca faça commit da senha de app.</em></p>
+</details>
+
+---
+
+<h2 id="codigo-fonte">9. 💻 Código Fonte</h2>
+
+Explore a documentação no Repositório Oficial:
+
+[[Repositório](https://img.shields.io/badge/Repositório-Domisnnet%2FN8n--Workflow--Essentials-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://github.com/Domisnnet/N8n-Workflow-Essentials)
+
+---
+
+<h2 id="creditos">10. 📝 Créditos</h2>
+
+| Atribuição | Responsável |
+| :--------- | :---------- |
+| **Dev & Automação** | **DomisDev** |
+| **Inspiração** | **DIO - Santander Automação com N8N & NotebookLM** |
+| **IA** | **Google Gemini & NotebookLM** |
+
+---
+
+<h2 id="licenca">11. 📄 Licença</h2>
+
+Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[[Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE) &nbsp; para mais detalhes.
+
+---
+
+<h2 id="perfil-do-github">12. 👨💻 Perfil</h2>
+
+<strong>DomisDev</strong> — Desenvolvedor Web Front-End & Entusiasta de Automação:
+
+<a href="https://github.com/Domisnnet">
+  <img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
+</a>
+
+&nbsp;
+<p align="center">
+  <a href="#sobre-o-projeto">
+    <img src="https://img.shields.io/badge/⬆%20VOLTAR%20AO%20TOPO-26FF00?style=flat&labelColor=111827&color=0A0F1C" alt="Voltar ao topo" style="height: 30px;">
+  </a>
+</p>
