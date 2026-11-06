@@ -12,10 +12,7 @@
       "name": "Webhook - RPA Clientes",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2,
-      "position": [
-        -900,
-        300
-      ]
+      "position": [ -900, 300 ]
     },
     {
       "parameters": {
@@ -26,10 +23,7 @@
       "name": "Code - Dividir Clientes",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        -500,
-        300
-      ]
+      "position": [ -500, 300 ]
     },
     {
       "parameters": {
@@ -47,10 +41,7 @@
       "name": "HTTP Request - data.csv",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        -700,
-        300
-      ],
+      "position": [ -700, 300 ],
       "notes": "LOCAL: RPA/docs/data.csv em http://localhost:8000/data.csv (python -m http.server 8000 em RPA/docs/)"
     },
     {
@@ -62,10 +53,7 @@
       "name": "Code - Cruze Dados",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        -300,
-        300
-      ],
+      "position": [ -300, 300 ],
       "notes": "Cruza 1 cliente x data.csv LOCAL. Regra: mesmo perfil E saldo >= minimo."
     },
     {
@@ -77,10 +65,7 @@
       "name": "Code - Gerar Mensagem",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        -80,
-        300
-      ]
+      "position": [ -80, 300 ]
     },
     {
       "parameters": {
@@ -111,10 +96,7 @@
       "name": "IF - Email Valido?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
-      "position": [
-        140,
-        300
-      ]
+      "position": [ 140, 300 ]
     },
     {
       "parameters": {
@@ -130,10 +112,7 @@
       "name": "Send a message - Gmail",
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
-      "position": [
-        360,
-        300
-      ]
+      "position": [ 360, 300 ]
     },
     {
       "parameters": {
@@ -145,10 +124,7 @@
       "name": "Respond to Webhook",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
-      "position": [
-        580,
-        300
-      ]
+      "position": [ 580, 300 ]
     }
   ],
   "connections": {
