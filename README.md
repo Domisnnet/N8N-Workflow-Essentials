@@ -11,8 +11,14 @@
 </p>
 
 <p align="center">
-  Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
+  Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code com Inteligência Artificial, inspirada na trilha <strong>Santander - Automação com N8N</strong> da DIO. São <strong>3 projetos em 1 repositório</strong>:
 </p>
+
+| # | Projeto | O que faz |
+| :--: | :--- | :--- |
+| 🎨 **1** | **Criador de Imagem com IA** | Gera o blueprint isométrico “Web Essentials - A Arquitetura dos Fundamentos” com Stability AI |
+| 🤖 **2** | **n8n + NotebookLM / Gemini** | Transforma commits do GitHub (TecBlog, Videos, Domflix, Responsive) em mapa mental, podcast e infográfico automáticos |
+| 📧 **3** | **RPA + n8n - E-mail Automático** | RPA extrai 10 clientes de um `index.html`, o n8n cruza com `data.csv` por perfil + saldo e envia e-mail personalizado de investimento |
 
 ---
 
