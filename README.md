@@ -14,7 +14,7 @@
   Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code com Inteligência Artificial, inspirada na trilha <strong>Santander - Automação com N8N</strong> da DIO. São <strong>3 projetos em 1 repositório</strong>:
 </p>
 
-| # | Projeto | O que faz |
+|  | Projeto | O que faz |
 | :--: | :--- | :--- |
 | 🎨 **1** | **Criador de Imagem com IA** | Gera o blueprint isométrico “Web Essentials - A Arquitetura dos Fundamentos” com Stability AI |
 | 🤖 **2** | **n8n + NotebookLM / Gemini** | Transforma commits do GitHub (TecBlog, Videos, Domflix, Responsive) em mapa mental, podcast e infográfico automáticos |
