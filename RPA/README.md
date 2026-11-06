@@ -7,7 +7,7 @@
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙</h2>
 
 <p align="center">
-  <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
+  <img src="../src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
 
 <p align="center">
@@ -115,7 +115,7 @@ Implementação do conceito **RAG** - Retrieval-Augmented Generation: o n8n alim
 > Uso do padrão `Webhook` → `Code - Dividir Clientes` → `HTTP Request - data.csv` → `Code - Cruze Dados` → `Code - Gerar Mensagem` → `IF - Email Valido?` → `Enviar um e-mail` → `Respond to Webhook` para garantir que cada cliente receba apenas produtos compatíveis com o seu perfil e saldo.
 
 <p align="center">
-  <img src="./src/assets/images/print-email.png" alt="E-mail automático enviado pelo workflow RPA + n8n - Ana Silva, Conservador, Poupança" width="800" />
+  <img src="../src/assets/images/print-email.png" alt="E-mail automático enviado pelo workflow RPA + n8n - Ana Silva, Conservador, Poupança" width="800" />
 </p>
 
 > Exemplo testado: `Ana Silva | Conservador | R$ 12.500,00` → `Poupança (mínimo R$ 100 | rentabilidade 6,2%)`. Assunto: `Sugestao de Investimento para voce, Ana Silva | Poupança`.
@@ -237,7 +237,7 @@ Este projeto está sob a Licença MIT. Veja o arquivo: &nbsp;[![Licença MIT](ht
 <strong>DomisDev</strong> — Desenvolvedor Web Front-End & Entusiasta de Automação:
 
 <a href="https://github.com/Domisnnet">
-  <img src="./src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
+  <img src="../src/assets/images/DomisDev.png" width="80" alt="DomisDev" style="border-radius: 50%;" />
 </a>
 
 &nbsp;
