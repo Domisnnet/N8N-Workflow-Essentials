@@ -6,6 +6,10 @@
 
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
 
+![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen?style=flat&logo=firebase&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat&logo=n8n&logoColor=white)
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE)
+
 <p align="center">
   <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
