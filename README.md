@@ -14,9 +14,7 @@
   <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
 
-<p align="center">
-  Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code com Inteligência Artificial, inspirada na trilha <strong>Santander - Automação com N8N</strong> da DIO. São <strong>3 projetos em 1 repositório</strong>:
-</p>
+> Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code com Inteligência Artificial, inspirada na trilha <strong>Santander - Automação com N8N</strong> da DIO. São <strong>3 projetos em 1 repositório</strong>:
 
 |  | Projeto | O que faz |
 | :--: | :--- | :--- |
