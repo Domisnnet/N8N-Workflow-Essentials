@@ -11,7 +11,7 @@
 [![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE)
 
 <p align="center">
-  <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
+  <img src="https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
 
 > Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials - TecBlog, Videos, Domflix, Responsive , com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
