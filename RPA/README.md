@@ -1,18 +1,20 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-![GitHub stars](https://img.shields.io/github/stars/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Domisnnet/N8n-Workflow-Essentials?style=for-the-badge)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE)
+![Repo Size](https://img.shields.io/github/repo-size/Domisnnet/N8N-Workflow-Essentials?style=flat&label=REPO%20SIZE&labelColor=2d333b&color=0969da)
+![Stars](https://img.shields.io/github/stars/Domisnnet/N8N-Workflow-Essentials?style=flat&label=STARS&labelColor=2d333b&color=0969da)
+![Last Commit](https://img.shields.io/github/last-commit/Domisnnet/N8N-Workflow-Essentials?style=flat&label=LAST%20COMMIT&labelColor=2d333b&color=2ea44f)
+![Version](https://img.shields.io/github/package-json/v/Domisnnet/N8N-Workflow-Essentials?style=flat&label=VERSION&labelColor=2d333b&color=0969da&logo=n8n&logoColor=white)
 
 
-<h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙</h2>
+<h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
+
+![Status do Deploy](https://img.shields.io/badge/Status-Online-brightgreen?style=flat&logo=firebase&logoColor=white)
+![n8n](https://img.shields.io/badge/Tecnologia-n8n-EA4B71?style=flat&logo=n8n&logoColor=white)
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Domisnnet/N8N-Workflow-Essentials/blob/main/LICENSE)
 
 <p align="center">
-  <img src="../src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
+  <img src="./src/assets/images/fluxo-n8n.png" alt="N8N Workflow Preview" width="800" />
 </p>
 
-<p align="center">
-  Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials (TecBlog, Videos, Domflix, Responsive) com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
-</p>
+> Bem-vindo ao <strong>N8N Workflow Essentials</strong>! Uma coleção de automações low-code que conecta seus projetos Web Essentials - TecBlog, Videos, Domflix, Responsive , com Inteligência Artificial. Inspirado na trilha <strong>Santander - Automação com N8N</strong> da DIO, este projeto transforma commits do GitHub em documentação visual automática via NotebookLM e Gemini.
 
 <p align="center">
   Este repositório reúne <strong>3 projetos</strong>:
