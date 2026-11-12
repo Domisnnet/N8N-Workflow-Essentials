@@ -1,7 +1,7 @@
 ![Repo Size](https://img.shields.io/github/repo-size/Domisnnet/N8N-Workflow-Essentials?style=flat&label=REPO%20SIZE&labelColor=2d333b&color=0969da)
 ![Stars](https://img.shields.io/github/stars/Domisnnet/N8N-Workflow-Essentials?style=flat&label=STARS&labelColor=2d333b&color=0969da)
 ![Last Commit](https://img.shields.io/github/last-commit/Domisnnet/N8N-Workflow-Essentials?style=flat&label=LAST%20COMMIT&labelColor=2d333b&color=2ea44f)
-![Version](https://img.shields.io/github/package-json/v/Domisnnet/N8N-Workflow-Essentials?style=flat&label=VERSION&labelColor=2d333b&color=0969da&logo=python&logoColor=white)
+![Version](https://img.shields.io/github/package-json/v/Domisnnet/N8N-Workflow-Essentials?style=flat&label=VERSION&labelColor=2d333b&color=0969da&logo=n8n&logoColor=white)
 
 
 <h2 id="sobre-o-projeto">1. N8N Workflow Essentials - Automação com IA 🤖⚙️</h2>
